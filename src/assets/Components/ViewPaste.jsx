@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./Paste.css";
-import catImg from "./Kitty.png";
+import catImg from "./kitty.png";
 
 export default function ViewPaste() {
   const { id } = useParams();
