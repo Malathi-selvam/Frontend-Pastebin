@@ -9,7 +9,7 @@ export default function ViewPaste() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch(`http://localhost:8080/api/paste/${id}`)
+    fetch(`https://backend-pastebin.vercel.app/api/paste/${id}`)
       .then((res) => {
         if (!res.ok) throw new Error("Paste not found or expired 😿");
         return res.json();
