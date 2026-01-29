@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Paste.css";
-import catImg from "../Components/Kitty.png";
+import catImg from "./Kitty.png";
+
 export default function CreatePaste() {
   const [content, setContent] = useState("");
   const [expire, setExpire] = useState(10);
