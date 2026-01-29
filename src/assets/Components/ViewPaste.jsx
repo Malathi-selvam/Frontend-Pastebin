@@ -8,8 +8,10 @@ export default function ViewPaste() {
   const [content, setContent] = useState("");
   const [error, setError] = useState("");
 
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
   useEffect(() => {
-    fetch(`https://backend-pastebin.vercel.app/api/paste/${id}`)
+    fetch(`${BACKEND_URL}/api/paste/${id}`)
       .then((res) => {
         if (!res.ok) throw new Error("Paste not found or expired 😿");
         return res.json();
